@@ -4,7 +4,11 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    # MongoDB
+    # Data store mode: "json" (local JSON files) or "mongodb"
+    data_store: str = "json"  # Switch: "json" for dev, "mongodb" for prod
+    json_data_dir: str = "data"  # Directory for JSON file storage
+
+    # MongoDB (used when data_store == "mongodb")
     mongodb_uri: str = "mongodb://localhost:27017"
     mongodb_database: str = "firewall_studio"
 

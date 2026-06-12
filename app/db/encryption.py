@@ -1,6 +1,6 @@
 """MongoDB Client-Side Field Level Encryption (CSFLE) setup.
 
-Configures automatic encryption for sensitive fields across collections.
+Updated for 10 consolidated collections.
 In development mode (encryption_enabled=False), no encryption is applied.
 """
 
@@ -9,13 +9,9 @@ import os
 
 from app.config import settings
 
-# Fields that should be encrypted per collection.
-# Format: collection_name -> list of field paths + bsonType
+# Fields that should be encrypted per consolidated collection
 ENCRYPTED_FIELD_SPECS: dict[str, list[dict]] = {
-    "firewall_groups": [
-        {"path": "members.value", "bsonType": "string"},
-    ],
-    "ingress_groups": [
+    "groups": [
         {"path": "members.value", "bsonType": "string"},
         {"path": "vip_entries.vip_address", "bsonType": "string"},
         {"path": "endpoint_entries.endpoint_name", "bsonType": "string"},
@@ -25,13 +21,13 @@ ENCRYPTED_FIELD_SPECS: dict[str, list[dict]] = {
         {"path": "before_snapshot", "bsonType": "object"},
         {"path": "after_snapshot", "bsonType": "object"},
     ],
-    "rule_requests": [
-        {"path": "owner", "bsonType": "string"},
+    "requests": [
+        {"path": "owner_email", "bsonType": "string"},
     ],
-    "physical_rules": [
+    "compiled_rules": [
         {"path": "compiled_text", "bsonType": "string"},
     ],
-    "itsm_connectors": [
+    "shared_services": [
         {"path": "auth_config", "bsonType": "object"},
     ],
 }
@@ -57,10 +53,7 @@ def get_kms_providers() -> dict:
 
 
 def get_encryption_schema_map() -> dict:
-    """Build the JSON schema map for automatic encryption.
-
-    Returns empty dict when encryption is disabled.
-    """
+    """Build the JSON schema map for automatic encryption."""
     if not settings.encryption_enabled:
         return {}
 

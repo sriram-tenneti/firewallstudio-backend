@@ -1,16 +1,21 @@
 """FastAPI application entry point for Network Firewall Studio Backend.
 
 Architecture:
-  Browser → Express BFF (auth, aggregation) → THIS FastAPI (business logic, MongoDB)
+  Browser → Express BFF (auth, aggregation) → THIS FastAPI (business logic)
+
+Data Store:
+  DATA_STORE=json   → reads/writes JSON files in data/ (default for dev)
+  DATA_STORE=mongodb → uses Motor async MongoDB driver (for production)
 """
 
+import logging
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.db.connection import get_db, close_connection
-from app.db.indexes import ensure_indexes
+from app.config import settings
+from app.db.store import get_store, JsonFileStore
 from app.middleware.audit_middleware import AuditMiddleware
 
 from app.routes.rules import router as rules_router
@@ -25,20 +30,40 @@ from app.routes.shared_services import router as shared_services_router
 from app.routes.audit import router as audit_router
 from app.routes.seed import router as seed_router
 from app.routes.export import router as export_router
+from app.routes.admin import router as admin_router
+
+logger = logging.getLogger(__name__)
 
 
 @asynccontextmanager
 async def lifespan(application: FastAPI):
-    """Startup: ensure indexes. Shutdown: close MongoDB connection."""
-    db = get_db()
-    await ensure_indexes(db)
+    """Startup: initialize data store. Shutdown: clean up connections."""
+    store = get_store()
+
+    if isinstance(store, JsonFileStore):
+        counts = await store.load_from_files()
+        total = sum(counts.values())
+        logger.info(f"JSON store loaded: {total} documents across {len(counts)} collections")
+    else:
+        # MongoDB mode — ensure indexes
+        from app.db.connection import get_db, close_connection
+        from app.db.indexes import ensure_indexes
+        db = get_db()
+        await ensure_indexes(db)
+
+    logger.info(f"Data store mode: {settings.data_store}")
     yield
-    await close_connection()
+
+    # Cleanup
+    if settings.data_store == "mongodb":
+        from app.db.connection import close_connection
+        await close_connection()
 
 
 app = FastAPI(
     title="Network Firewall Studio — Backend API",
     version="1.0.0",
+    description=f"Data store: {settings.data_store}",
     lifespan=lifespan,
 )
 
@@ -55,6 +80,7 @@ app.add_middleware(
 app.add_middleware(AuditMiddleware)
 
 # Route order matters: specific prefixes before catch-all patterns
+app.include_router(admin_router)          # /api/admin/*
 app.include_router(shared_services_router)
 app.include_router(groups_router)
 app.include_router(rules_router)
@@ -71,4 +97,9 @@ app.include_router(export_router)
 
 @app.get("/healthz")
 async def healthz():
-    return {"status": "ok"}
+    store = get_store()
+    return {
+        "status": "ok",
+        "data_store": settings.data_store,
+        "store_type": type(store).__name__,
+    }
