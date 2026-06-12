@@ -31,6 +31,7 @@ from app.routes.audit import router as audit_router
 from app.routes.seed import router as seed_router
 from app.routes.export import router as export_router
 from app.routes.admin import router as admin_router
+from app.routes.validation import router as validation_router
 
 logger = logging.getLogger(__name__)
 
@@ -81,6 +82,7 @@ app.add_middleware(AuditMiddleware)
 
 # Route order matters: specific prefixes before catch-all patterns
 app.include_router(admin_router)          # /api/admin/*
+app.include_router(validation_router)     # /api/validation/*
 app.include_router(shared_services_router)
 app.include_router(groups_router)
 app.include_router(rules_router)
