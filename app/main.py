@@ -32,6 +32,10 @@ from app.routes.seed import router as seed_router
 from app.routes.export import router as export_router
 from app.routes.admin import router as admin_router
 from app.routes.validation import router as validation_router
+from app.routes.compile import router as compile_router
+from app.routes.birthright import router as birthright_router
+from app.routes.itsm import router as itsm_router
+from app.routes.migration_apply import router as migration_apply_router
 
 logger = logging.getLogger(__name__)
 
@@ -83,6 +87,10 @@ app.add_middleware(AuditMiddleware)
 # Route order matters: specific prefixes before catch-all patterns
 app.include_router(admin_router)          # /api/admin/*
 app.include_router(validation_router)     # /api/validation/*
+app.include_router(compile_router)        # /api/compile/*
+app.include_router(birthright_router)     # /api/birthright-rules, /api/validate-birthright-cross-dc
+app.include_router(itsm_router)           # /api/itsm/*
+app.include_router(migration_apply_router) # /api/migration/apply*
 app.include_router(shared_services_router)
 app.include_router(groups_router)
 app.include_router(rules_router)

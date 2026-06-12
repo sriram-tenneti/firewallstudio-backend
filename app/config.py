@@ -12,16 +12,11 @@ class Settings(BaseSettings):
     mongodb_uri: str = "mongodb://localhost:27017"
     mongodb_database: str = "firewall_studio"
 
-    # Encryption — KMS provider config (AWS KMS example; swap for Azure/Vault)
+    # Encryption — local master key for field-level encryption (no cloud KMS)
     encryption_enabled: bool = False
-    kms_provider: str = "local"  # "aws" | "azure" | "gcp" | "local"
-    # Local master key (32 bytes base64) — only for dev; use KMS in prod
+    kms_provider: str = "local"
+    # Local master key (96 bytes base64) — auto-generated on first run if empty
     local_master_key: str = ""
-    # AWS KMS (when kms_provider == "aws")
-    aws_access_key_id: str = ""
-    aws_secret_access_key: str = ""
-    aws_kms_key_arn: str = ""
-    aws_kms_region: str = "us-east-1"
 
     # App
     environment: str = "development"

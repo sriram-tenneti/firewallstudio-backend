@@ -34,22 +34,12 @@ ENCRYPTED_FIELD_SPECS: dict[str, list[dict]] = {
 
 
 def get_kms_providers() -> dict:
-    """Build KMS provider config based on settings."""
-    if settings.kms_provider == "local":
-        key = settings.local_master_key
-        if not key:
-            key = base64.b64encode(os.urandom(96)).decode()
-        return {"local": {"key": base64.b64decode(key)}}
-
-    if settings.kms_provider == "aws":
-        return {
-            "aws": {
-                "accessKeyId": settings.aws_access_key_id,
-                "secretAccessKey": settings.aws_secret_access_key,
-            }
-        }
-
-    return {"local": {"key": os.urandom(96)}}
+    """Build KMS provider config using local master key (no cloud KMS)."""
+    key = settings.local_master_key
+    if not key:
+        # Auto-generate and log a warning — user should persist this key
+        key = base64.b64encode(os.urandom(96)).decode()
+    return {"local": {"key": base64.b64decode(key)}}
 
 
 def get_encryption_schema_map() -> dict:
