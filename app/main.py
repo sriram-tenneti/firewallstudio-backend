@@ -24,6 +24,7 @@ from app.routes.migrations import router as migrations_router
 from app.routes.shared_services import router as shared_services_router
 from app.routes.audit import router as audit_router
 from app.routes.seed import router as seed_router
+from app.routes.export import router as export_router
 
 
 @asynccontextmanager
@@ -65,6 +66,7 @@ app.include_router(lifecycle_router)
 app.include_router(migrations_router)
 app.include_router(audit_router)
 app.include_router(seed_router)
+app.include_router(export_router)
 
 
 @app.get("/healthz")
