@@ -1,0 +1,600 @@
+{
+  "production": [
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "GEN",
+      "dest_zone": "GEN",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Any DC, Any NH \u2013 GEN-to-GEN traffic permitted, no firewall"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "STD",
+      "dest_zone": "STD",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Any DC, Any NH \u2013 STD-to-STD traffic permitted, no firewall"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "GEN",
+      "dest_zone": "STD",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "GEN/STD interchangeable \u2013 permitted, no firewall"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "STD",
+      "dest_zone": "GEN",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "GEN/STD interchangeable \u2013 permitted, no firewall"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "CCS",
+      "dest_zone": "CCS",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Same SZ intra-zone \u2013 permitted within same NH"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "CDE",
+      "dest_zone": "CDE",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Same SZ intra-zone \u2013 permitted within same NH"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "CPA",
+      "dest_zone": "CPA",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Same SZ intra-zone \u2013 permitted within same NH"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "PAA",
+      "dest_zone": "PAA",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Same SZ intra-zone \u2013 permitted within same NH"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "3PY",
+      "dest_zone": "3PY",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Same SZ intra-zone \u2013 permitted within same NH"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "Swift",
+      "dest_zone": "Swift",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Same SZ intra-zone \u2013 permitted within same NH"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "PSE",
+      "dest_zone": "PSE",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Same SZ intra-zone \u2013 permitted within same NH"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "UC",
+      "dest_zone": "UC",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Same SZ intra-zone \u2013 permitted within same NH"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "CCS",
+      "dest_zone": "CDE",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "egress+ingress",
+      "reason": "Cross-SZ: requires egress (src NH CCS FW) + ingress (dst NH CDE FW)"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "CCS",
+      "dest_zone": "CPA",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "egress+ingress",
+      "reason": "Cross-SZ: requires egress (src NH CCS FW) + ingress (dst NH CPA FW)"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "CDE",
+      "dest_zone": "CCS",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "egress+ingress",
+      "reason": "Cross-SZ: requires egress (src NH CDE FW) + ingress (dst NH CCS FW)"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "CDE",
+      "dest_zone": "CPA",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "egress+ingress",
+      "reason": "Cross-SZ: requires egress (src NH CDE FW) + ingress (dst NH CPA FW)"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "CPA",
+      "dest_zone": "CCS",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "egress+ingress",
+      "reason": "Cross-SZ: requires egress (src NH CPA FW) + ingress (dst NH CCS FW)"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "CPA",
+      "dest_zone": "CDE",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "egress+ingress",
+      "reason": "Cross-SZ: requires egress (src NH CPA FW) + ingress (dst NH CDE FW)"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "PAA",
+      "dest_zone": "CCS",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "egress+ingress",
+      "reason": "Cross-SZ: PAA to CCS requires PAA FW egress + CCS FW ingress"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "PAA",
+      "dest_zone": "CDE",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "egress+ingress",
+      "reason": "Cross-SZ: PAA to CDE requires PAA FW egress + CDE FW ingress"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "PAA",
+      "dest_zone": "CPA",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "egress+ingress",
+      "reason": "Cross-SZ: PAA to CPA requires PAA FW egress + CPA FW ingress"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "GEN",
+      "dest_zone": "CCS",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "ingress",
+      "reason": "GEN to segmented zone: ingress through dest NH CCS FW"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "GEN",
+      "dest_zone": "CDE",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "GEN to CDE not permitted \u2013 no direct path"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "GEN",
+      "dest_zone": "CPA",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "ingress",
+      "reason": "GEN to segmented zone: ingress through dest NH CPA FW"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "STD",
+      "dest_zone": "CCS",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "ingress",
+      "reason": "STD to segmented zone: ingress through dest NH CCS FW"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "STD",
+      "dest_zone": "CDE",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "STD to CDE not permitted \u2013 no direct path"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "STD",
+      "dest_zone": "CPA",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "ingress",
+      "reason": "STD to segmented zone: ingress through dest NH CPA FW"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "CCS",
+      "dest_zone": "GEN",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "egress",
+      "reason": "Segmented to GEN: egress through src NH CCS FW"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "CDE",
+      "dest_zone": "GEN",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "CDE to GEN not permitted \u2013 CDE is isolated"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "CPA",
+      "dest_zone": "GEN",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "egress",
+      "reason": "Segmented to GEN: egress through src NH CPA FW"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "USTD",
+      "dest_zone": "GEN",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod to Prod traffic blocked"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "USTD",
+      "dest_zone": "CCS",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod to Prod traffic blocked"
+    },
+    {
+      "matrix_type": "NGDC-Prod",
+      "source_zone": "UCCS",
+      "dest_zone": "CCS",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod to Prod traffic blocked"
+    }
+  ],
+  "non_production": [
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "USTD",
+      "dest_zone": "USTD",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Non-Prod USTD intra-zone \u2013 permitted"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "UGen",
+      "dest_zone": "UGen",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Non-Prod UGen intra-zone \u2013 permitted"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "USTD",
+      "dest_zone": "UGen",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "USTD/UGen interchangeable \u2013 permitted"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "UGen",
+      "dest_zone": "USTD",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "UGen/USTD interchangeable \u2013 permitted"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "UCCS",
+      "dest_zone": "UCCS",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Non-Prod UCCS same-SZ \u2013 permitted"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "UCDE",
+      "dest_zone": "UCDE",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Non-Prod UCDE same-SZ \u2013 permitted"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "UCPA",
+      "dest_zone": "UCPA",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Non-Prod UCPA same-SZ \u2013 permitted"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "UPAA",
+      "dest_zone": "UPAA",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Non-Prod UPAA same-SZ \u2013 permitted"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "UCCS",
+      "dest_zone": "UCDE",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "egress+ingress",
+      "reason": "Cross-SZ in Non-Prod: requires egress + ingress FW"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "UCCS",
+      "dest_zone": "UCPA",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "egress+ingress",
+      "reason": "Cross-SZ in Non-Prod: requires egress + ingress FW"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "UCDE",
+      "dest_zone": "UCCS",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "egress+ingress",
+      "reason": "Cross-SZ in Non-Prod: requires egress + ingress FW"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "UCPA",
+      "dest_zone": "UCCS",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "egress+ingress",
+      "reason": "Cross-SZ in Non-Prod: requires egress + ingress FW"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "USTD",
+      "dest_zone": "UCCS",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "ingress",
+      "reason": "USTD to segmented: ingress through dest FW"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "USTD",
+      "dest_zone": "UCDE",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "USTD to UCDE not permitted"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "USTD",
+      "dest_zone": "UCPA",
+      "action": "Firewall Request Required",
+      "firewall_traversal": "ingress",
+      "reason": "USTD to segmented: ingress through dest FW"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "USTD",
+      "dest_zone": "GEN",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod to Prod blocked"
+    },
+    {
+      "matrix_type": "Non-Prod",
+      "source_zone": "UCCS",
+      "dest_zone": "CCS",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod to Prod blocked"
+    }
+  ],
+  "pre_production": [
+    {
+      "matrix_type": "Pre-Prod",
+      "source_zone": "USTD",
+      "dest_zone": "USTD",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Pre-Prod USTD intra-zone \u2013 permitted"
+    },
+    {
+      "matrix_type": "Pre-Prod",
+      "source_zone": "UGen",
+      "dest_zone": "UGen",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Pre-Prod UGen intra-zone \u2013 permitted"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "USTD",
+      "dest_zone": "USTD",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Non-Prod USTD to Pre-Prod USTD \u2013 permitted"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UGen",
+      "dest_zone": "UGen",
+      "action": "Permitted",
+      "firewall_traversal": "none",
+      "reason": "Non-Prod UGen to Pre-Prod UGen \u2013 permitted"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "USTD",
+      "dest_zone": "UPAA",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod USTD to Pre-Prod PAA \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "USTD",
+      "dest_zone": "UCCS",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod USTD to Pre-Prod CCS \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "USTD",
+      "dest_zone": "UCPA",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod USTD to Pre-Prod CPA \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UGen",
+      "dest_zone": "UPAA",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod UGen to Pre-Prod PAA \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UGen",
+      "dest_zone": "UCCS",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod UGen to Pre-Prod CCS \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UGen",
+      "dest_zone": "UCPA",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod UGen to Pre-Prod CPA \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UCCS",
+      "dest_zone": "UPAA",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod UCCS to Pre-Prod PAA \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UCCS",
+      "dest_zone": "UCCS",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod UCCS to Pre-Prod CCS \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UCCS",
+      "dest_zone": "UCPA",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod UCCS to Pre-Prod CPA \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UPAA",
+      "dest_zone": "UPAA",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod UPAA to Pre-Prod PAA \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UPAA",
+      "dest_zone": "UCCS",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod UPAA to Pre-Prod CCS \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UPAA",
+      "dest_zone": "UCPA",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod UPAA to Pre-Prod CPA \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UCPA",
+      "dest_zone": "UPAA",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod UCPA to Pre-Prod PAA \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UCPA",
+      "dest_zone": "UCCS",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod UCPA to Pre-Prod CCS \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UCPA",
+      "dest_zone": "UCPA",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod UCPA to Pre-Prod CPA \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UCDE",
+      "dest_zone": "UPAA",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod UCDE to Pre-Prod PAA \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UCDE",
+      "dest_zone": "UCCS",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod UCDE to Pre-Prod CCS \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod-CrossEnv",
+      "source_zone": "UCDE",
+      "dest_zone": "UCPA",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Non-Prod UCDE to Pre-Prod CPA \u2013 blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod",
+      "source_zone": "USTD",
+      "dest_zone": "GEN",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Pre-Prod to Prod blocked"
+    },
+    {
+      "matrix_type": "Pre-Prod",
+      "source_zone": "UCCS",
+      "dest_zone": "CCS",
+      "action": "Blocked",
+      "firewall_traversal": "n/a",
+      "reason": "Pre-Prod to Prod blocked"
+    }
+  ]
+}

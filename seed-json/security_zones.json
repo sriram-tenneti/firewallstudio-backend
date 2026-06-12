@@ -1,0 +1,172 @@
+[
+  {
+    "code": "STD",
+    "name": "Standard Zone",
+    "risk_level": "Low",
+    "pci_scope": false,
+    "fabric": "Production",
+    "vrf_prefix": "gen/SZ01",
+    "cidr": "varies per NH",
+    "description": "General application zone \u2013 standard workloads, non-sensitive"
+  },
+  {
+    "code": "GEN",
+    "name": "General Zone",
+    "risk_level": "Low",
+    "pci_scope": false,
+    "fabric": "Production",
+    "vrf_prefix": "gen/SZ01",
+    "cidr": "varies per NH",
+    "description": "General-purpose compute (alias for STD), routing/transit"
+  },
+  {
+    "code": "PAA",
+    "name": "Publicly Accessible Applications",
+    "risk_level": "High",
+    "pci_scope": false,
+    "fabric": "Production",
+    "vrf_prefix": "paa/SZ02",
+    "cidr": "varies per NH",
+    "description": "Front-end / internet-accessible applications in DMZ"
+  },
+  {
+    "code": "3PY",
+    "name": "Third Party",
+    "risk_level": "High",
+    "pci_scope": false,
+    "fabric": "Production",
+    "vrf_prefix": "nh##-sz03",
+    "cidr": "varies per NH",
+    "description": "Third-party owned or managed workloads"
+  },
+  {
+    "code": "CCS",
+    "name": "Critical Core Services",
+    "risk_level": "Critical",
+    "pci_scope": true,
+    "fabric": "Production",
+    "vrf_prefix": "nh##-sz04",
+    "cidr": "varies per NH",
+    "description": "Management/control-plane and critical core banking services"
+  },
+  {
+    "code": "CDE",
+    "name": "Card Holder Data Environment",
+    "risk_level": "Critical",
+    "pci_scope": true,
+    "fabric": "Production",
+    "vrf_prefix": "nh##-sz05",
+    "cidr": "varies per NH",
+    "description": "PCI DSS scope \u2013 cardholder/PAN data processing and storage"
+  },
+  {
+    "code": "CPA",
+    "name": "Critical Payment Applications",
+    "risk_level": "Critical",
+    "pci_scope": true,
+    "fabric": "Production",
+    "vrf_prefix": "nh##-sz06",
+    "cidr": "varies per NH",
+    "description": "Enterprise payment applications and settlement"
+  },
+  {
+    "code": "PSE",
+    "name": "Production Simulation",
+    "risk_level": "High",
+    "pci_scope": false,
+    "fabric": "Production",
+    "vrf_prefix": "nh##-sz07",
+    "cidr": "varies per NH",
+    "description": "Technology enablement simulation \u2013 uses CCS firewall"
+  },
+  {
+    "code": "Swift",
+    "name": "Swift Zone",
+    "risk_level": "Critical",
+    "pci_scope": true,
+    "fabric": "Production",
+    "vrf_prefix": "nh##-sz08",
+    "cidr": "varies per NH",
+    "description": "Dedicated Swift messaging applications \u2013 uses CPA firewall"
+  },
+  {
+    "code": "UC",
+    "name": "Unified Communications",
+    "risk_level": "Medium",
+    "pci_scope": false,
+    "fabric": "Production",
+    "vrf_prefix": "nh##-sz09",
+    "cidr": "varies per NH",
+    "description": "Unified communications zone"
+  },
+  {
+    "code": "UGen",
+    "name": "Non-Prod General",
+    "risk_level": "Low",
+    "pci_scope": false,
+    "fabric": "Non-Production",
+    "vrf_prefix": "gen",
+    "cidr": "varies per NH",
+    "description": "General zone for non-prod routing"
+  },
+  {
+    "code": "USTD",
+    "name": "Non-Prod Standard",
+    "risk_level": "Low",
+    "pci_scope": false,
+    "fabric": "Non-Production",
+    "vrf_prefix": "gen",
+    "cidr": "varies per NH",
+    "description": "Non-prod/UAT/CTE/SIT/DEV standard workloads"
+  },
+  {
+    "code": "UPAA",
+    "name": "Non-Prod PAA",
+    "risk_level": "Medium",
+    "pci_scope": false,
+    "fabric": "Non-Production",
+    "vrf_prefix": "paa/sz-02",
+    "cidr": "varies per NH",
+    "description": "Non-prod front-end / internet-accessible applications"
+  },
+  {
+    "code": "UCPA",
+    "name": "Non-Prod CPA",
+    "risk_level": "High",
+    "pci_scope": false,
+    "fabric": "Non-Production",
+    "vrf_prefix": "nh##-sz06",
+    "cidr": "varies per NH",
+    "description": "Non-prod critical payment applications"
+  },
+  {
+    "code": "UCDE",
+    "name": "Non-Prod CDE",
+    "risk_level": "High",
+    "pci_scope": false,
+    "fabric": "Non-Production",
+    "vrf_prefix": "nh##-sz05",
+    "cidr": "varies per NH",
+    "description": "Non-prod cardholder data environment"
+  },
+  {
+    "code": "UCCS",
+    "name": "Non-Prod CCS",
+    "risk_level": "High",
+    "pci_scope": false,
+    "fabric": "Non-Production",
+    "vrf_prefix": "nh##-sz04",
+    "cidr": "varies per NH",
+    "description": "Non-prod critical core services"
+  },
+  {
+    "code": "U3PY",
+    "name": "Non-Prod Third Party",
+    "risk_level": "Medium",
+    "pci_scope": false,
+    "fabric": "Non-Production",
+    "vrf_prefix": "nh##-sz03",
+    "cidr": "varies per NH",
+    "description": "Non-prod third-party workloads"
+  }
+]

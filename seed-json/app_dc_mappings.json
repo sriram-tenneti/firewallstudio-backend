@@ -1,0 +1,592 @@
+[
+  {
+    "app_id": "CRM",
+    "component": "WEB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH14",
+    "sz": "PAA",
+    "cidr": "10.70.1.10/32",
+    "status": "Active",
+    "notes": "CRM internet-facing web tier"
+  },
+  {
+    "app_id": "CRM",
+    "component": "APP",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH02",
+    "sz": "CCS",
+    "cidr": "10.1.1.0/28",
+    "status": "Active",
+    "notes": "CRM application servers"
+  },
+  {
+    "app_id": "CRM",
+    "component": "DB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH02",
+    "sz": "CDE",
+    "cidr": "10.1.1.128/28",
+    "status": "Active",
+    "notes": "CRM database \u2013 PCI CDE"
+  },
+  {
+    "app_id": "CRM",
+    "component": "BAT",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH02",
+    "sz": "CCS",
+    "cidr": "10.1.1.30/32",
+    "status": "Active",
+    "notes": "CRM batch processing"
+  },
+  {
+    "app_id": "CRM",
+    "component": "API",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH02",
+    "sz": "CCS",
+    "cidr": "10.1.1.40/30",
+    "status": "Active",
+    "notes": "CRM API gateway"
+  },
+  {
+    "app_id": "CRM",
+    "component": "APP",
+    "dc": "BETA_NGDC",
+    "nh": "NH02",
+    "sz": "CCS",
+    "cidr": "172.16.1.20/28",
+    "status": "Active",
+    "notes": "CRM Beta DR app tier"
+  },
+  {
+    "app_id": "CRM",
+    "component": "DB",
+    "dc": "BETA_NGDC",
+    "nh": "NH02",
+    "sz": "CDE",
+    "cidr": "172.16.1.128/28",
+    "status": "Active",
+    "notes": "CRM Beta DR database"
+  },
+  {
+    "app_id": "HRM",
+    "component": "WEB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH01",
+    "sz": "GEN",
+    "cidr": "10.0.2.130/31",
+    "status": "Active",
+    "notes": "HRM web servers"
+  },
+  {
+    "app_id": "HRM",
+    "component": "APP",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH01",
+    "sz": "GEN",
+    "cidr": "10.0.2.140/30",
+    "status": "Active",
+    "notes": "HRM application servers"
+  },
+  {
+    "app_id": "HRM",
+    "component": "DB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH01",
+    "sz": "GEN",
+    "cidr": "10.0.2.150/31",
+    "status": "Active",
+    "notes": "HRM database"
+  },
+  {
+    "app_id": "HRM",
+    "component": "BAT",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH01",
+    "sz": "GEN",
+    "cidr": "10.0.2.160/32",
+    "status": "Active",
+    "notes": "HRM batch"
+  },
+  {
+    "app_id": "TRD",
+    "component": "WEB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH14",
+    "sz": "PAA",
+    "cidr": "10.70.1.65/30",
+    "status": "Active",
+    "notes": "TRD internet-facing trading UI"
+  },
+  {
+    "app_id": "TRD",
+    "component": "APP",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH06",
+    "sz": "CDE",
+    "cidr": "10.5.1.64/27",
+    "status": "Active",
+    "notes": "TRD application servers"
+  },
+  {
+    "app_id": "TRD",
+    "component": "DB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH06",
+    "sz": "CDE",
+    "cidr": "10.5.1.80/30",
+    "status": "Active",
+    "notes": "TRD database cluster"
+  },
+  {
+    "app_id": "TRD",
+    "component": "MQ",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH06",
+    "sz": "CDE",
+    "cidr": "10.5.1.85/31",
+    "status": "Active",
+    "notes": "TRD message queue brokers"
+  },
+  {
+    "app_id": "TRD",
+    "component": "API",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH06",
+    "sz": "CCS",
+    "cidr": "10.5.1.0/28",
+    "status": "Active",
+    "notes": "TRD API layer in CCS"
+  },
+  {
+    "app_id": "TRD",
+    "component": "BAT",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH06",
+    "sz": "CDE",
+    "cidr": "10.5.1.95/32",
+    "status": "Active",
+    "notes": "TRD batch processing"
+  },
+  {
+    "app_id": "TRD",
+    "component": "APP",
+    "dc": "BETA_NGDC",
+    "nh": "NH06",
+    "sz": "CDE",
+    "cidr": "172.16.6.64/27",
+    "status": "Active",
+    "notes": "TRD Beta DR app tier"
+  },
+  {
+    "app_id": "TRD",
+    "component": "DB",
+    "dc": "BETA_NGDC",
+    "nh": "NH06",
+    "sz": "CDE",
+    "cidr": "172.16.6.80/30",
+    "status": "Active",
+    "notes": "TRD Beta DR database"
+  },
+  {
+    "app_id": "TRD",
+    "component": "APP",
+    "dc": "GAMMA_NGDC",
+    "nh": "NH06",
+    "sz": "CDE",
+    "cidr": "172.16.20.64/27",
+    "status": "Active",
+    "notes": "TRD Gamma DR app tier"
+  },
+  {
+    "app_id": "PAY",
+    "component": "APP",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH07",
+    "sz": "CPA",
+    "cidr": "10.6.1.128/27",
+    "status": "Active",
+    "notes": "PAY transaction processors"
+  },
+  {
+    "app_id": "PAY",
+    "component": "DB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH07",
+    "sz": "CDE",
+    "cidr": "10.6.1.0/28",
+    "status": "Active",
+    "notes": "PAY database \u2013 PCI CDE"
+  },
+  {
+    "app_id": "PAY",
+    "component": "MQ",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH07",
+    "sz": "CPA",
+    "cidr": "10.6.1.160/30",
+    "status": "Active",
+    "notes": "PAY message queue"
+  },
+  {
+    "app_id": "PAY",
+    "component": "API",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH07",
+    "sz": "CPA",
+    "cidr": "10.6.1.164/30",
+    "status": "Active",
+    "notes": "PAY API gateway"
+  },
+  {
+    "app_id": "INS",
+    "component": "WEB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH04",
+    "sz": "GEN",
+    "cidr": "10.3.1.128/28",
+    "status": "Active",
+    "notes": "INS web portal"
+  },
+  {
+    "app_id": "INS",
+    "component": "APP",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH04",
+    "sz": "GEN",
+    "cidr": "10.3.1.144/28",
+    "status": "Active",
+    "notes": "INS application servers"
+  },
+  {
+    "app_id": "INS",
+    "component": "DB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH04",
+    "sz": "CCS",
+    "cidr": "10.3.1.0/28",
+    "status": "Active",
+    "notes": "INS database in CCS"
+  },
+  {
+    "app_id": "INS",
+    "component": "BAT",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH04",
+    "sz": "GEN",
+    "cidr": "10.3.1.160/32",
+    "status": "Active",
+    "notes": "INS batch processing"
+  },
+  {
+    "app_id": "INS",
+    "component": "APP",
+    "dc": "BETA_NGDC",
+    "nh": "NH04",
+    "sz": "GEN",
+    "cidr": "172.16.4.144/28",
+    "status": "Active",
+    "notes": "INS Beta DR"
+  },
+  {
+    "app_id": "KYC",
+    "component": "WEB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH05",
+    "sz": "GEN",
+    "cidr": "10.4.1.128/28",
+    "status": "Active",
+    "notes": "KYC web portal"
+  },
+  {
+    "app_id": "KYC",
+    "component": "APP",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH05",
+    "sz": "GEN",
+    "cidr": "10.4.1.144/28",
+    "status": "Active",
+    "notes": "KYC application servers"
+  },
+  {
+    "app_id": "KYC",
+    "component": "DB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH05",
+    "sz": "CCS",
+    "cidr": "10.4.1.0/28",
+    "status": "Active",
+    "notes": "KYC database in CCS"
+  },
+  {
+    "app_id": "KYC",
+    "component": "API",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH05",
+    "sz": "GEN",
+    "cidr": "10.4.1.160/30",
+    "status": "Active",
+    "notes": "KYC API layer"
+  },
+  {
+    "app_id": "FRD",
+    "component": "APP",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH02",
+    "sz": "CDE",
+    "cidr": "10.1.1.160/28",
+    "status": "Active",
+    "notes": "FRD fraud engine"
+  },
+  {
+    "app_id": "FRD",
+    "component": "DB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH02",
+    "sz": "CDE",
+    "cidr": "10.1.2.0/28",
+    "status": "Active",
+    "notes": "FRD database \u2013 PCI CDE"
+  },
+  {
+    "app_id": "FRD",
+    "component": "MQ",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH02",
+    "sz": "CDE",
+    "cidr": "10.1.1.176/30",
+    "status": "Active",
+    "notes": "FRD message queue"
+  },
+  {
+    "app_id": "FRD",
+    "component": "API",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH02",
+    "sz": "CCS",
+    "cidr": "10.1.1.0/30",
+    "status": "Active",
+    "notes": "FRD API in CCS"
+  },
+  {
+    "app_id": "FRD",
+    "component": "APP",
+    "dc": "BETA_NGDC",
+    "nh": "NH02",
+    "sz": "CDE",
+    "cidr": "172.16.1.160/28",
+    "status": "Active",
+    "notes": "FRD Beta DR"
+  },
+  {
+    "app_id": "LND",
+    "component": "WEB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH09",
+    "sz": "GEN",
+    "cidr": "10.8.1.128/28",
+    "status": "Active",
+    "notes": "LND web portal"
+  },
+  {
+    "app_id": "LND",
+    "component": "APP",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH09",
+    "sz": "GEN",
+    "cidr": "10.8.1.144/28",
+    "status": "Active",
+    "notes": "LND application servers"
+  },
+  {
+    "app_id": "LND",
+    "component": "DB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH09",
+    "sz": "CCS",
+    "cidr": "10.8.1.0/28",
+    "status": "Active",
+    "notes": "LND database in CCS"
+  },
+  {
+    "app_id": "LND",
+    "component": "BAT",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH09",
+    "sz": "GEN",
+    "cidr": "10.8.1.160/32",
+    "status": "Active",
+    "notes": "LND batch processing"
+  },
+  {
+    "app_id": "WLT",
+    "component": "WEB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH14",
+    "sz": "PAA",
+    "cidr": "10.70.1.100/30",
+    "status": "Active",
+    "notes": "WLT internet-facing portal"
+  },
+  {
+    "app_id": "WLT",
+    "component": "APP",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH10",
+    "sz": "GEN",
+    "cidr": "10.9.1.128/28",
+    "status": "Active",
+    "notes": "WLT application servers"
+  },
+  {
+    "app_id": "WLT",
+    "component": "DB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH10",
+    "sz": "CDE",
+    "cidr": "10.9.1.0/28",
+    "status": "Active",
+    "notes": "WLT database \u2013 PCI CDE"
+  },
+  {
+    "app_id": "WLT",
+    "component": "API",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH10",
+    "sz": "GEN",
+    "cidr": "10.9.1.144/30",
+    "status": "Active",
+    "notes": "WLT API layer"
+  },
+  {
+    "app_id": "CBK",
+    "component": "APP",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH08",
+    "sz": "CCS",
+    "cidr": "10.7.1.0/28",
+    "status": "Active",
+    "notes": "CBK core banking engine"
+  },
+  {
+    "app_id": "CBK",
+    "component": "DB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH08",
+    "sz": "CDE",
+    "cidr": "10.7.1.128/28",
+    "status": "Active",
+    "notes": "CBK database \u2013 PCI CDE"
+  },
+  {
+    "app_id": "CBK",
+    "component": "MQ",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH08",
+    "sz": "CCS",
+    "cidr": "10.7.1.16/30",
+    "status": "Active",
+    "notes": "CBK message queue"
+  },
+  {
+    "app_id": "CBK",
+    "component": "API",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH08",
+    "sz": "CCS",
+    "cidr": "10.7.1.20/30",
+    "status": "Active",
+    "notes": "CBK API layer"
+  },
+  {
+    "app_id": "CBK",
+    "component": "BAT",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH08",
+    "sz": "CCS",
+    "cidr": "10.7.1.24/32",
+    "status": "Active",
+    "notes": "CBK batch processing"
+  },
+  {
+    "app_id": "EPT",
+    "component": "WEB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH14",
+    "sz": "PAA",
+    "cidr": "10.70.1.20/30",
+    "status": "Active",
+    "notes": "EPT internet-facing portal"
+  },
+  {
+    "app_id": "EPT",
+    "component": "APP",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH01",
+    "sz": "CCS",
+    "cidr": "10.0.1.0/28",
+    "status": "Active",
+    "notes": "EPT application servers"
+  },
+  {
+    "app_id": "EPT",
+    "component": "API",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH01",
+    "sz": "CCS",
+    "cidr": "10.0.1.16/30",
+    "status": "Active",
+    "notes": "EPT API gateway"
+  },
+  {
+    "app_id": "EPT",
+    "component": "APP",
+    "dc": "BETA_NGDC",
+    "nh": "NH01",
+    "sz": "CCS",
+    "cidr": "172.16.50.0/28",
+    "status": "Active",
+    "notes": "EPT Beta DR"
+  },
+  {
+    "app_id": "MBK",
+    "component": "WEB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH14",
+    "sz": "PAA",
+    "cidr": "10.70.1.30/30",
+    "status": "Active",
+    "notes": "MBK mobile banking web"
+  },
+  {
+    "app_id": "MBK",
+    "component": "APP",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH07",
+    "sz": "CPA",
+    "cidr": "10.6.1.168/28",
+    "status": "Active",
+    "notes": "MBK application servers"
+  },
+  {
+    "app_id": "MBK",
+    "component": "DB",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH07",
+    "sz": "CDE",
+    "cidr": "10.6.1.16/28",
+    "status": "Active",
+    "notes": "MBK database \u2013 PCI CDE"
+  },
+  {
+    "app_id": "MBK",
+    "component": "API",
+    "dc": "ALPHA_NGDC",
+    "nh": "NH07",
+    "sz": "CPA",
+    "cidr": "10.6.1.184/30",
+    "status": "Active",
+    "notes": "MBK API layer"
+  }
+]

@@ -1,0 +1,209 @@
+[
+  {
+    "app_id": "CRM",
+    "name": "Customer Relationship Manager",
+    "app_distributed_id": "AD-1001",
+    "owner": "Team Eta",
+    "nh": "NH02,NH14",
+    "sz": "CCS,CDE,PAA",
+    "criticality": "High",
+    "pci_scope": true,
+    "components": [
+      "WEB",
+      "APP",
+      "DB",
+      "BAT",
+      "API"
+    ],
+    "description": "CRM platform for customer data management"
+  },
+  {
+    "app_id": "HRM",
+    "name": "Human Resource Manager",
+    "app_distributed_id": "AD-1002",
+    "owner": "Team Platform",
+    "nh": "NH01",
+    "sz": "GEN",
+    "criticality": "Medium",
+    "pci_scope": false,
+    "components": [
+      "WEB",
+      "APP",
+      "DB",
+      "BAT"
+    ],
+    "description": "HR management and employee portal"
+  },
+  {
+    "app_id": "TRD",
+    "name": "Trading Platform",
+    "app_distributed_id": "AD-1003",
+    "owner": "Team Xi",
+    "nh": "NH06,NH14",
+    "sz": "CCS,CDE,PAA",
+    "criticality": "Critical",
+    "pci_scope": true,
+    "components": [
+      "WEB",
+      "APP",
+      "DB",
+      "MQ",
+      "API",
+      "BAT"
+    ],
+    "description": "Real-time trading and market data"
+  },
+  {
+    "app_id": "PAY",
+    "name": "Payment Gateway",
+    "app_distributed_id": "AD-1004",
+    "owner": "Team Epsilon",
+    "nh": "NH07",
+    "sz": "CDE,CPA",
+    "criticality": "Critical",
+    "pci_scope": true,
+    "components": [
+      "APP",
+      "DB",
+      "MQ",
+      "API"
+    ],
+    "description": "Payment processing and settlement"
+  },
+  {
+    "app_id": "INS",
+    "name": "Insurance Portal",
+    "app_distributed_id": "AD-1005",
+    "owner": "Team Kappa",
+    "nh": "NH04",
+    "sz": "CCS,GEN",
+    "criticality": "High",
+    "pci_scope": false,
+    "components": [
+      "WEB",
+      "APP",
+      "DB",
+      "BAT"
+    ],
+    "description": "Insurance policy management"
+  },
+  {
+    "app_id": "KYC",
+    "name": "KYC Compliance",
+    "app_distributed_id": "AD-1006",
+    "owner": "Team Lambda",
+    "nh": "NH05",
+    "sz": "CCS,GEN",
+    "criticality": "High",
+    "pci_scope": false,
+    "components": [
+      "WEB",
+      "APP",
+      "DB",
+      "API"
+    ],
+    "description": "Know Your Customer compliance platform"
+  },
+  {
+    "app_id": "FRD",
+    "name": "Fraud Detection",
+    "app_distributed_id": "AD-1007",
+    "owner": "Team Eta",
+    "nh": "NH02",
+    "sz": "CCS,CDE",
+    "criticality": "Critical",
+    "pci_scope": true,
+    "components": [
+      "APP",
+      "DB",
+      "MQ",
+      "API"
+    ],
+    "description": "Real-time fraud detection engine"
+  },
+  {
+    "app_id": "LND",
+    "name": "Lending Platform",
+    "app_distributed_id": "AD-1008",
+    "owner": "Team Iota",
+    "nh": "NH09",
+    "sz": "CCS,GEN",
+    "criticality": "High",
+    "pci_scope": false,
+    "components": [
+      "WEB",
+      "APP",
+      "DB",
+      "BAT"
+    ],
+    "description": "Digital lending and loan origination"
+  },
+  {
+    "app_id": "WLT",
+    "name": "Wealth Management",
+    "app_distributed_id": "AD-1009",
+    "owner": "Team Mu",
+    "nh": "NH10,NH14",
+    "sz": "CDE,GEN,PAA",
+    "criticality": "High",
+    "pci_scope": true,
+    "components": [
+      "WEB",
+      "APP",
+      "DB",
+      "API"
+    ],
+    "description": "Portfolio and wealth management"
+  },
+  {
+    "app_id": "CBK",
+    "name": "Core Banking",
+    "app_distributed_id": "AD-1010",
+    "owner": "Team Theta",
+    "nh": "NH08",
+    "sz": "CCS,CDE",
+    "criticality": "Critical",
+    "pci_scope": true,
+    "components": [
+      "APP",
+      "DB",
+      "MQ",
+      "API",
+      "BAT"
+    ],
+    "description": "Core banking transaction engine"
+  },
+  {
+    "app_id": "EPT",
+    "name": "Enterprise Portal",
+    "app_distributed_id": "AD-1011",
+    "owner": "Team Platform",
+    "nh": "NH01,NH14",
+    "sz": "CCS,PAA",
+    "criticality": "High",
+    "pci_scope": false,
+    "components": [
+      "WEB",
+      "APP",
+      "API"
+    ],
+    "description": "Internet-facing enterprise portal (PAA zone)"
+  },
+  {
+    "app_id": "MBK",
+    "name": "Mobile Banking",
+    "app_distributed_id": "AD-1012",
+    "owner": "Team Epsilon",
+    "nh": "NH07,NH14",
+    "sz": "CPA,PAA",
+    "criticality": "Critical",
+    "pci_scope": true,
+    "components": [
+      "WEB",
+      "APP",
+      "DB",
+      "API"
+    ],
+    "description": "Mobile banking application"
+  }
+]

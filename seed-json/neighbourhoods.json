@@ -1,0 +1,630 @@
+[
+  {
+    "nh_id": "NH01",
+    "name": "Technology Enablement Services",
+    "environment": "Production",
+    "cidr": "10.0.0.0/16",
+    "description": "Technology enablement and platform services",
+    "ip_ranges": [
+      {
+        "cidr": "10.0.1.0/24",
+        "description": "NH01 East Primary",
+        "dc": "ALPHA_NGDC"
+      },
+      {
+        "cidr": "10.0.2.0/24",
+        "description": "NH01 East Secondary",
+        "dc": "ALPHA_NGDC"
+      },
+      {
+        "cidr": "172.16.50.0/24",
+        "description": "NH01 West Primary",
+        "dc": "BETA_NGDC"
+      },
+      {
+        "cidr": "10.50.50.0/24",
+        "description": "NH01 Central Primary",
+        "dc": "GAMMA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "CCS",
+        "vrf_id": "NH01-sz04",
+        "cidr": "10.0.1.0/25",
+        "description": "Critical Core Services"
+      },
+      {
+        "zone": "CDE",
+        "vrf_id": "NH01-sz05",
+        "cidr": "10.0.1.128/25",
+        "description": "Card Holder Data"
+      },
+      {
+        "zone": "CPA",
+        "vrf_id": "NH01-sz06",
+        "cidr": "10.0.2.0/25",
+        "description": "Critical Payment Applications"
+      },
+      {
+        "zone": "GEN",
+        "vrf_id": "NH01-gen",
+        "cidr": "10.0.2.128/25",
+        "transit_vni": 4000,
+        "description": "Standard/General"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH02",
+    "name": "Core Banking",
+    "environment": "Production",
+    "cidr": "10.1.0.0/16",
+    "description": "Core banking services and data processing",
+    "ip_ranges": [
+      {
+        "cidr": "10.1.1.0/24",
+        "description": "NH02 East App Tier",
+        "dc": "ALPHA_NGDC"
+      },
+      {
+        "cidr": "10.1.2.0/24",
+        "description": "NH02 East DB Tier",
+        "dc": "ALPHA_NGDC"
+      },
+      {
+        "cidr": "172.16.1.0/24",
+        "description": "NH02 West App",
+        "dc": "BETA_NGDC"
+      },
+      {
+        "cidr": "10.50.1.0/24",
+        "description": "NH02 Central App",
+        "dc": "GAMMA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "CCS",
+        "vrf_id": "NH02-sz04",
+        "cidr": "10.1.1.0/25",
+        "description": "Critical Core Services"
+      },
+      {
+        "zone": "CDE",
+        "vrf_id": "NH02-sz05",
+        "cidr": "10.1.1.128/25",
+        "transit_vni": 8051,
+        "description": "Card Holder Data"
+      },
+      {
+        "zone": "CPA",
+        "vrf_id": "NH02-sz06",
+        "cidr": "10.1.2.0/25",
+        "description": "Critical Payment Applications"
+      },
+      {
+        "zone": "GEN",
+        "vrf_id": "NH02-gen",
+        "cidr": "10.1.2.128/25",
+        "transit_vni": 4000,
+        "description": "Standard/General"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH03",
+    "name": "Digital Channels",
+    "environment": "Production",
+    "cidr": "10.2.0.0/16",
+    "description": "Digital channels, web and API hosting",
+    "ip_ranges": [
+      {
+        "cidr": "10.2.1.0/24",
+        "description": "NH03 East Web Servers",
+        "dc": "ALPHA_NGDC"
+      },
+      {
+        "cidr": "10.2.2.0/24",
+        "description": "NH03 East App Servers",
+        "dc": "ALPHA_NGDC"
+      },
+      {
+        "cidr": "172.16.3.0/24",
+        "description": "NH03 West Web",
+        "dc": "BETA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "CCS",
+        "vrf_id": "NH03-sz04",
+        "cidr": "10.2.1.0/25",
+        "description": "Critical Core Services"
+      },
+      {
+        "zone": "CDE",
+        "vrf_id": "NH03-sz05",
+        "cidr": "10.2.1.128/25",
+        "description": "Card Holder Data"
+      },
+      {
+        "zone": "GEN",
+        "vrf_id": "NH03-gen",
+        "cidr": "10.2.2.0/24",
+        "transit_vni": 4000,
+        "description": "Standard/General"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH04",
+    "name": "Wealth Management",
+    "environment": "Production",
+    "cidr": "10.3.0.0/16",
+    "description": "Wealth management and insurance",
+    "ip_ranges": [
+      {
+        "cidr": "10.3.1.0/24",
+        "description": "NH04 East Primary",
+        "dc": "ALPHA_NGDC"
+      },
+      {
+        "cidr": "172.16.4.0/24",
+        "description": "NH04 West Primary",
+        "dc": "BETA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "CCS",
+        "vrf_id": "NH04-sz04",
+        "cidr": "10.3.1.0/25",
+        "description": "Critical Core Services"
+      },
+      {
+        "zone": "GEN",
+        "vrf_id": "NH04-gen",
+        "cidr": "10.3.1.128/25",
+        "transit_vni": 4000,
+        "description": "Standard/General"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH05",
+    "name": "Enterprise Services",
+    "environment": "Production",
+    "cidr": "10.4.0.0/16",
+    "description": "Enterprise services, compliance, and KYC",
+    "ip_ranges": [
+      {
+        "cidr": "10.4.1.0/24",
+        "description": "NH05 East App",
+        "dc": "ALPHA_NGDC"
+      },
+      {
+        "cidr": "10.4.2.0/24",
+        "description": "NH05 East DB",
+        "dc": "ALPHA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "CCS",
+        "vrf_id": "NH05-sz04",
+        "cidr": "10.4.1.0/25",
+        "description": "Critical Core Services"
+      },
+      {
+        "zone": "GEN",
+        "vrf_id": "NH05-gen",
+        "cidr": "10.4.1.128/25",
+        "transit_vni": 4000,
+        "description": "Standard/General"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH06",
+    "name": "Wholesale Banking",
+    "environment": "Production",
+    "cidr": "10.5.0.0/16",
+    "description": "Wholesale banking and trading platforms",
+    "ip_ranges": [
+      {
+        "cidr": "10.5.1.0/24",
+        "description": "NH06 East Primary",
+        "dc": "ALPHA_NGDC"
+      },
+      {
+        "cidr": "172.16.6.0/24",
+        "description": "NH06 West Primary",
+        "dc": "BETA_NGDC"
+      },
+      {
+        "cidr": "172.16.20.0/24",
+        "description": "NH06 Central Primary",
+        "dc": "GAMMA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "CCS",
+        "vrf_id": "NH06-sz04",
+        "cidr": "10.5.1.0/26",
+        "description": "Critical Core Services"
+      },
+      {
+        "zone": "CDE",
+        "vrf_id": "NH06-sz05",
+        "cidr": "10.5.1.64/26",
+        "description": "Card Holder Data"
+      },
+      {
+        "zone": "CPA",
+        "vrf_id": "NH06-sz06",
+        "cidr": "10.5.1.128/26",
+        "description": "Critical Payment Applications"
+      },
+      {
+        "zone": "GEN",
+        "vrf_id": "NH06-gen",
+        "cidr": "10.5.1.192/26",
+        "transit_vni": 4000,
+        "description": "Standard/General"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH07",
+    "name": "Global Payments and Liquidity",
+    "environment": "Production",
+    "cidr": "10.6.0.0/16",
+    "description": "Global payments, liquidity, and settlement",
+    "ip_ranges": [
+      {
+        "cidr": "10.6.1.0/24",
+        "description": "NH07 East Primary",
+        "dc": "ALPHA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "CDE",
+        "vrf_id": "NH07-sz05",
+        "cidr": "10.6.1.0/25",
+        "description": "Card Holder Data"
+      },
+      {
+        "zone": "CPA",
+        "vrf_id": "NH07-sz06",
+        "cidr": "10.6.1.128/25",
+        "description": "Critical Payment Applications"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH08",
+    "name": "Data and Analytics",
+    "environment": "Production",
+    "cidr": "10.7.0.0/16",
+    "description": "Data analytics and core banking engine",
+    "ip_ranges": [
+      {
+        "cidr": "10.7.1.0/24",
+        "description": "NH08 East Primary",
+        "dc": "ALPHA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "CCS",
+        "vrf_id": "NH08-sz04",
+        "cidr": "10.7.1.0/25",
+        "description": "Critical Core Services"
+      },
+      {
+        "zone": "CDE",
+        "vrf_id": "NH08-sz05",
+        "cidr": "10.7.1.128/25",
+        "description": "Card Holder Data"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH09",
+    "name": "Assisted Channels",
+    "environment": "Production",
+    "cidr": "10.8.0.0/16",
+    "description": "Assisted channels and digital lending",
+    "ip_ranges": [
+      {
+        "cidr": "10.8.1.0/24",
+        "description": "NH09 East Primary",
+        "dc": "ALPHA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "CCS",
+        "vrf_id": "NH09-sz04",
+        "cidr": "10.8.1.0/25",
+        "description": "Critical Core Services"
+      },
+      {
+        "zone": "GEN",
+        "vrf_id": "NH09-gen",
+        "cidr": "10.8.1.128/25",
+        "transit_vni": 4000,
+        "description": "Standard/General"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH10",
+    "name": "Consumer Lending",
+    "environment": "Production",
+    "cidr": "10.9.0.0/16",
+    "description": "Consumer lending and portfolio management",
+    "ip_ranges": [
+      {
+        "cidr": "10.9.1.0/24",
+        "description": "NH10 East Primary",
+        "dc": "ALPHA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "CDE",
+        "vrf_id": "NH10-sz05",
+        "cidr": "10.9.1.0/25",
+        "description": "Card Holder Data"
+      },
+      {
+        "zone": "GEN",
+        "vrf_id": "NH10-gen",
+        "cidr": "10.9.1.128/25",
+        "transit_vni": 4000,
+        "description": "Standard/General"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH11",
+    "name": "Production Mainframe",
+    "environment": "Production",
+    "cidr": "10.10.0.0/16",
+    "description": "Production mainframe systems",
+    "ip_ranges": [
+      {
+        "cidr": "10.10.1.0/24",
+        "description": "NH11 East Mainframe",
+        "dc": "ALPHA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "CCS",
+        "vrf_id": "NH11-sz04",
+        "cidr": "10.10.1.0/25",
+        "description": "Critical Core Services"
+      },
+      {
+        "zone": "GEN",
+        "vrf_id": "NH11-gen",
+        "cidr": "10.10.1.128/25",
+        "transit_vni": 4000,
+        "description": "Standard/General"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH12",
+    "name": "Non-Production Mainframe",
+    "environment": "Non-Production",
+    "cidr": "10.11.0.0/16",
+    "description": "Non-production mainframe systems",
+    "ip_ranges": [
+      {
+        "cidr": "10.11.1.0/24",
+        "description": "NH12 East NP Mainframe",
+        "dc": "ALPHA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "UCCS",
+        "vrf_id": "NH12-sz04",
+        "cidr": "10.11.1.0/25",
+        "description": "Non-Prod Critical Core Services"
+      },
+      {
+        "zone": "USTD",
+        "vrf_id": "NH12-gen",
+        "cidr": "10.11.1.128/25",
+        "description": "Non-Prod Standard"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH13",
+    "name": "Non-Production Shared",
+    "environment": "Non-Production",
+    "cidr": "10.12.0.0/16",
+    "description": "Shared non-production workloads (DEV/SIT/UAT/CTE)",
+    "ip_ranges": [
+      {
+        "cidr": "10.12.1.0/24",
+        "description": "NH13 East NP Shared",
+        "dc": "ALPHA_NGDC"
+      },
+      {
+        "cidr": "10.12.2.0/24",
+        "description": "NH13 East NP DB",
+        "dc": "ALPHA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "USTD",
+        "vrf_id": "NH13-gen",
+        "cidr": "10.12.1.0/25",
+        "description": "Non-Prod Standard"
+      },
+      {
+        "zone": "UCCS",
+        "vrf_id": "NH13-sz04",
+        "cidr": "10.12.1.128/25",
+        "description": "Non-Prod Critical Core Services"
+      },
+      {
+        "zone": "UCDE",
+        "vrf_id": "NH13-sz05",
+        "cidr": "10.12.2.0/25",
+        "description": "Non-Prod CDE"
+      },
+      {
+        "zone": "UCPA",
+        "vrf_id": "NH13-sz06",
+        "cidr": "10.12.2.128/25",
+        "description": "Non-Prod CPA"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH14",
+    "name": "DMZ",
+    "environment": "Production",
+    "cidr": "10.70.0.0/16",
+    "description": "External-facing DMZ / Publicly Accessible Applications",
+    "ip_ranges": [
+      {
+        "cidr": "10.70.1.0/24",
+        "description": "NH14 East DMZ",
+        "dc": "ALPHA_NGDC"
+      },
+      {
+        "cidr": "10.70.2.0/24",
+        "description": "NH14 East External",
+        "dc": "ALPHA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "PAA",
+        "vrf_id": "NH14-sz02",
+        "cidr": "10.70.1.0/24",
+        "description": "Publicly Accessible Applications"
+      },
+      {
+        "zone": "GEN",
+        "vrf_id": "NH14-gen",
+        "cidr": "10.70.2.0/24",
+        "transit_vni": 4000,
+        "description": "Standard/General"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH15",
+    "name": "Non-Production DMZ",
+    "environment": "Non-Production",
+    "cidr": "10.80.0.0/16",
+    "description": "Non-production DMZ and management",
+    "ip_ranges": [
+      {
+        "cidr": "10.80.1.0/24",
+        "description": "NH15 East NP DMZ",
+        "dc": "ALPHA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "UPAA",
+        "vrf_id": "NH15-sz02",
+        "cidr": "10.80.1.0/25",
+        "description": "Non-Prod PAA"
+      },
+      {
+        "zone": "USTD",
+        "vrf_id": "NH15-gen",
+        "cidr": "10.80.1.128/25",
+        "description": "Non-Prod Standard"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH16",
+    "name": "Pre-Production",
+    "environment": "Pre-Production",
+    "cidr": "10.13.0.0/16",
+    "description": "Pre-production / staging shared workloads",
+    "ip_ranges": [
+      {
+        "cidr": "10.13.1.0/24",
+        "description": "NH16 East Pre-Prod",
+        "dc": "ALPHA_NGDC"
+      },
+      {
+        "cidr": "10.13.2.0/24",
+        "description": "NH16 East Pre-Prod DB",
+        "dc": "ALPHA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "USTD",
+        "vrf_id": "NH16-gen",
+        "cidr": "10.13.1.0/25",
+        "description": "Pre-Prod Standard"
+      },
+      {
+        "zone": "UCCS",
+        "vrf_id": "NH16-sz04",
+        "cidr": "10.13.1.128/25",
+        "description": "Pre-Prod CCS"
+      },
+      {
+        "zone": "UCDE",
+        "vrf_id": "NH16-sz05",
+        "cidr": "10.13.2.0/25",
+        "description": "Pre-Prod CDE"
+      },
+      {
+        "zone": "UCPA",
+        "vrf_id": "NH16-sz06",
+        "cidr": "10.13.2.128/25",
+        "description": "Pre-Prod CPA"
+      }
+    ]
+  },
+  {
+    "nh_id": "NH17",
+    "name": "Pre-Production DMZ",
+    "environment": "Pre-Production",
+    "cidr": "10.14.0.0/16",
+    "description": "Pre-production DMZ",
+    "ip_ranges": [
+      {
+        "cidr": "10.14.1.0/24",
+        "description": "NH17 East Pre-Prod DMZ",
+        "dc": "ALPHA_NGDC"
+      }
+    ],
+    "security_zones": [
+      {
+        "zone": "UPAA",
+        "vrf_id": "NH17-sz02",
+        "cidr": "10.14.1.0/25",
+        "description": "Pre-Prod PAA"
+      },
+      {
+        "zone": "USTD",
+        "vrf_id": "NH17-gen",
+        "cidr": "10.14.1.128/25",
+        "description": "Pre-Prod Standard"
+      }
+    ]
+  }
+]

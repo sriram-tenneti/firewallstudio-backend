@@ -1,0 +1,26 @@
+[
+  {
+    "dc_id": "ALPHA_NGDC",
+    "name": "Alpha NGDC (East)",
+    "region": "US-East",
+    "status": "Active",
+    "cidr": "10.0.0.0/8",
+    "description": "Primary NGDC data center - US East coast"
+  },
+  {
+    "dc_id": "BETA_NGDC",
+    "name": "Beta NGDC (West)",
+    "region": "US-West",
+    "status": "Active",
+    "cidr": "172.16.0.0/12",
+    "description": "Secondary NGDC data center - US West coast"
+  },
+  {
+    "dc_id": "GAMMA_NGDC",
+    "name": "Gamma NGDC (Central)",
+    "region": "US-Central",
+    "status": "Active",
+    "cidr": "10.50.0.0/16",
+    "description": "Central NGDC data center - US Central"
+  }
+]

@@ -1,0 +1,11 @@
+fastapi[standard]>=0.115.0
+uvicorn>=0.34.0
+motor>=3.6.0
+pymongo[encryption]>=4.9.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+python-dotenv>=1.0.0
+openpyxl>=3.1.0
+xlrd>=2.0.1
+python-multipart>=0.0.6
+aiofiles>=24.1.0

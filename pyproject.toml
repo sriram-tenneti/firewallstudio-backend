@@ -1,0 +1,9 @@
+[project]
+name = "firewallstudio-backend"
+version = "1.0.0"
+description = "FastAPI backend for Network Firewall Studio — MongoDB, encrypted collections, audit trails, request state machine"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
